@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+    --dark-grey: #0a0a23;
+    --light-grey: #f5f6f7;
+    --white: #ffffff;
+    --black: #000;
+}
+body {
+    background-color: var(--dark-grey);
+    text-align: center;
+    padding: 10px;
+}
+.title,
+.options-label,
+.team-stats,
+footer {
+  color: var(--white);
+}
+.title {
+    margin: 1.3rem 0;
+}
+.team-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    margin: 1.2rem 0;
+  }
+
+  .options-label {
+    font-size: 1.5rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .task-card {
+    background-color: var(--light-grey);
+    padding: 1.3rem;
+    margin: 1.2rem;
+    width: 300px;
+    border-radius: 15px;
+  }
+  .tasks-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .todo-app {
+    background-color: var(--white);
+    min-width: 80%;
+    /* height: 100%; */
+    border: 5px solid var(--yellow);
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+    overflow: hidden;
+  }
+  .btn-bar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .btn {
+    cursor: pointer;
+    width: 40%;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 1em;
+    color: rgb(60, 53, 83);
+    background-color: var(--golden-yellow);
+    background-image: linear-gradient(#d9d3c2, #53d273c1);
+    border-color: var(--golden-yellow);
+    border-width: 3px;
+  }
+  #open-task-form-btn {
+    width: 100%;
+  }
+
+.btn:hover {
+    background-image: linear-gradient(#ffcc4c, #f89808);
+  }
+  .large-btn {
+    width: 80%;
+    font-size: 1.2rem;
+    align-self: center;
+    justify-self: center;
+  }
+  .close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .close-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .task-form {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 15px;
+    min-width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .task-form-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .task-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+  .task-form-footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5em;
+  }
+.task-form-label,
+#title-input,
+#date-input,
+#description-input {
+  display: block;
+  font-size: 1.2em;
+}
+.task-form-label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 3em;
+  font-weight: 800;
+}
+#title-input,
+#date-input,
+#description-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+#confirm-close-dialog {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+.confirm-close-dialog-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.discard-message-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#tasks-container {
+  height: 100%;
+  overflow-y: auto;
+}
+.task {
+  margin: 5px 0;
+}
+.diff-form {
+  display: flex;
+  justify-content: space-around;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 768px) {
+    .team-stats {
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 576px) {
+    .todo-app,
+    .task-form {
+      width: 400px;
+      height: 480px;
+    }
+  
+    .task-form-label {
+      font-size: 1.5rem;
+    }
+  
+    #title-input,
+    #date-input {
+      height: 2rem;
+    }
+  
+    #title-input,
+    #date-input,
+    #description-input {
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+  }
